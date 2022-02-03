@@ -35,7 +35,7 @@ async def start_handler(_, event: Message):
             [InlineKeyboardButton("Bots Channel", url="https://t.me/TeleRoidGroup"),
              InlineKeyboardButton("Support Group", url="https://t.me/TeleRoid14")],
             [InlineKeyboardButton("♻ Help", callback_data="Help_msg"),
-             InlineKeyboardButton("👥 About", callback_data="About_msg")],
+             InlineKeyboardButton("⚙ About", callback_data="About_msg")],
             [InlineKeyboardButton(" Add Your Bots Here ", callback_data="addbots")],
             [InlineKeyboardButton("Search Inline", switch_inline_query_current_chat=""), InlineKeyboardButton("Go Inline", switch_inline_query="")]
         ])
@@ -48,7 +48,7 @@ async def help_handler(_, event: Message):
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("🚸 Pᴏᴡᴇʀᴇᴅ Bʏ", url="https://t.me/MoviesFlixers_DL"),
              InlineKeyboardButton("🌱 Inspired Channel ", url="https://t.me/TGRobot_List"), 
-             InlineKeyboardButton("👥 About", callback_data="About_msg")],
+             InlineKeyboardButton("⚙ About", callback_data="About_msg")],
             [InlineKeyboardButton("Search Inline", switch_inline_query_current_chat=""), InlineKeyboardButton("Go Inline", switch_inline_query="")]
         ])
     )
@@ -64,15 +64,15 @@ async def inline_handlers(_, event: InlineQuery):
                 description="You Can Search All Bots Available On TeleGram.",
                 thumb_url="https://telegra.ph/file/cb4099b549491a622c481.jpg", 
                 input_message_content=InputTextMessageContent(
-                    message_text="A dream does not become reality through magic; it takes sweat, determination, and hard work."
+                    message_text="A dream does not become reality through magic; it takes sweat, determination, and hard work.\n\n"
 
-                                  "<a>@TheTeleRoid || @Space_X_Bots</a>"
+                                  "<a>@TheTeleRoid || @Space_X_Bots</a>\n\n"
 
-                                  "<a>🔴 YouTube Channel :</a>"
+                                  "<a>🔴 YouTube Channel :</a>\n"
 
-                                  "<a>https://youtube.com/channel/UCeAteLGyraSil9pErMFTZAg </a>"
+                                  "<a>https://youtube.com/channel/UCeAteLGyraSil9pErMFTZAg </a>\n\n"
 
-                                  "<a>👥 BotChat : @TeleRoid14 </a>"
+                                  "<a>👥 BotChat : @TeleRoid14 </a>\n\n"
 
 
                                   "<a> Follow Our Bot Updates Channel : @TeleRoidGroup</a>",
@@ -189,24 +189,32 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("👥 TeleRoid Support👥", url="https://t.me/TeleRoid14"),
-						InlineKeyboardButton("👥 Space X Bots 👥", url="https://t.me/Sources_Codes")
+						InlineKeyboardButton("😇 TeleRoid Support", url="https://t.me/TeleRoid14"),
+						InlineKeyboardButton("🔵 Space X Bots ", url="https://t.me/Sources_Codes")
 					],
 					[
-						InlineKeyboardButton("👥 CodeXBotz 👥", url="https://t.me/CodeXBotZSupport"),
-						InlineKeyboardButton("👥 Universal Bots 👥", url="https://t.me/JV_Community")
+						InlineKeyboardButton("⚪ CodeXBotz ", url="https://t.me/CodeXBotZSupport"),
+						InlineKeyboardButton("⚪ Universal Bots ", url="https://t.me/JV_Community")
 					], 
                                         [
-						InlineKeyboardButton("👥 Heiman Support 👥", url="https://t.me/HeimanSupport"),
-						InlineKeyboardButton("👥 TGRobot Support👥", url="https://t.me/joinchat/rqSonBIiCP01NWI1")
+						InlineKeyboardButton("🔴 Heiman Support ", url="https://t.me/HeimanSupport"),
+						InlineKeyboardButton("🔴 TGRobot Support", url="https://t.me/joinchat/rqSonBIiCP01NWI1")
 					], 
                                         [
-						InlineKeyboardButton("🏠 Home ", callback_data="gohome")
+						InlineKeyboardButton("🏠 Home", callback_data="gohome"),
+						InlineKeyboardButton("🔐 Close", callback_data="close"")
 					]
 				]
 			),
 			parse_mode="html"
 		)
+
+
+@Bot.on_callback_query()
+async def button(bot, cmd: CallbackQuery):
+ 
+      if  'close'  in update.data:
+                await update.message.delete()
 
 # Start Clients
 Bot.start()
