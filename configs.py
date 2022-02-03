@@ -52,11 +52,11 @@ Choose Your Bot Category Here 🤗
 ☛ WATERMARK_BOT
 ☛ VIDEO_MERGER_BOTS
 
-**These Bots can Do Multiple things with different Functions**:-
+<a>These Bots can Do Multiple things with different Functions</a>:-
 
 🌀 I will help you to find Best Telegram Bots.
 
-🌀 If you Get Any Error In Searching Please Report at **@TeleRoid14**.
+🌀 If you Get Any Error In Searching Please Report at @TeleRoid14.
 
 🌀 Our Project Channel: <a href='https://t.me/TeleRoidGroup'>@TeleRoidGroup</a>.
 
@@ -66,7 +66,7 @@ Choose Your Bot Category Here 🤗
 """
     
     HOME_TEXT = """
-<b>👋 Hey !{}, This is Online Search Botlist Bot <a href='https://t.me/PHListBot'>@PHListBot</a>.
+<b>👋 Hey!, This is Online Search Botlist Bot @PHListBot.
 
 <a> Modified By : @PredatorHackerzZ</a>
 
